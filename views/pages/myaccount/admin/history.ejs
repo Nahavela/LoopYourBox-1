@@ -12,10 +12,12 @@
 </head>
 
 <body>
+   <!-- NARBAR -->
+   <%- include('../../../layouts/navbar.ejs') -%>
+   <a class="backBtn" onclick="window.history.back();"> <i class="fas fa-arrow-left"></i></a>
 
 <!-- NARBAR -->
 <%- include('../../../layouts/navbar.ejs') -%>
-<a class="backBtn" href="/dashboard"><i class="fas fa-arrow-left"></i></a>
 <div class="container">
    <div class="row">
       <h2 class="sub_page-heading">History</h2>
@@ -126,6 +128,6 @@
    <!-- <script>
       let partnerInfo = <%- JSON.stringify(historyInfo) %>
    </script>-->
-   <script src="/js/selectFilterHistory.js"></script>
+<script src="/js/selectFilterHistory.js"></script>
 
 </html>

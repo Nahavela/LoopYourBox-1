@@ -1,24 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/css/materialize.css">
+    <link rel="stylesheet" href="/css/container_details.css">
+    <script src="https://kit.fontawesome.com/ade53cd309.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
+    <!-- NARBAR -->
+    <%- include('../../layouts/navbar.ejs') -%>
+    <!-- MAIN -->
     <a class="backBtn" onclick="window.history.back();"><i class="fas fa-arrow-left"></i></a>
     <div class="container">
         <div class="row">
-            <h2>User Details</h2>
+            <h2 class="sub_page-heading">User Details</h2>
         </div>
         <div class="row">
             <ul class="collection with-header">
-                <li class="collection-header"><h4><%= userInfo.firstname %></h4></li>
+                <li class="collection-item">
+                    <%= userInfo.firstname %>
+                </li>
                 <li class="collection-item"><%= userInfo.lastname %></li>
                 <li class="collection-item"><%= userInfo.email %></li>
             </ul>
-            
+
             <a class="col s4 offset-s1 btn green darken-1" href="/updateUser/<%= userInfo._id %>">Edit</a>
             <a class="col s4 offset-s2 btn green darken-1" href="/api/user/delete/<%= userInfo._id %>">Delete</a>
         </div>
@@ -28,4 +37,5 @@
     <script src="/js/bin/materialize.js"></script>
     <script src="/js/bin/materialize-init.js"></script>
 </body>
+
 </html>

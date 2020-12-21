@@ -27,17 +27,22 @@ body .container a, body .container button {
   text-align: center;
   padding-bottom: 1rem;
   border-bottom: 1px solid rgba(203, 203, 203, 0.976);
+  color: #43a047;
 }
 
 .backBtn {
   position: fixed;
-  top: 0.7rem;
-  left: 1rem;
+  top: 0.4rem;
+  left: 0.2rem;
   border-radius: 100%;
-  background: rgba(236, 236, 236, 0.976);
+  font-size: 1.3rem;
   color: #43a047;
   padding: 0.9rem 1rem;
   z-index: 1000;
+}
+
+#btn-padding {
+  margin-top: 2rem;
 }
 
 .m-1 {

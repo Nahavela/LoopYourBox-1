@@ -8,6 +8,7 @@
 
 body {
    .container {
+      padding-bottom: 5rem;
       width: 80%;
       color: darken($base-grey, 60%);
       .user {
@@ -36,7 +37,7 @@ body {
          }
 
          .padding {
-            padding: 0.5rem 0;
+            padding: 0.7rem 0;
          }
 
          #modal, #modal2 {

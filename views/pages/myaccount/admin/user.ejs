@@ -2,7 +2,6 @@
 <html>
 
 <head>
-<<<<<<< HEAD
    <meta charset='utf-8' />
    <title>Local search app</title>
    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
@@ -44,6 +43,8 @@
 <script src="/js/bin/materialize-init.js"></script>
 
 =======
+=======
+>>>>>>> Lap
   <meta charset='utf-8' />
   <title>Local search app</title>
   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
@@ -53,24 +54,29 @@
 
 </head>
 
+
 <body>
-  <!-- NARBAR -->
+  <!-- NAVBAR -->
   <%- include('../../../layouts/navbar.ejs') -%>
-  <a class="backBtn" onclick="window.history.back();"><i class="fas fa-arrow-left"></i></a>
+  <a class="backBtn" onclick="window.history.back();"> <i class="fas fa-arrow-left"></i></a>
   <div class="container">
     <div class="row">
       <h2 class="sub_page-heading">List of users</h2>
     </div>
-    <div class="list">
-      <% userInfo.forEach((user) => { %>
-      <div class="list-item">
-         <a href="/user/<%= user._id %>"><%= user.firstname %></a><i class="fas fa-chevron-right"></i>
-      </div>
-      <% }); %>
-   </div>
 
-  </div>
+    <% userInfo.forEach((user) => { %>
+    <div class="user-item">
+      <a href="/user/<%= user._id %>" class=""><%= user.firstname %></a>
+      <form action="/api/userStatus/<%= user._id %>?_method=PUT" method="POST" class="">
+        <select class="browser-default" id="status" name="status">
+          <option value="admin" <% if (user.status=="admin"){%> selected <%}%>>Admin</option>
+            <option value="partner" <% if (user.status=="partner"){%> selected <%}%>>Partenaire</option>
+            <option value="member" <% if (user.status=="member"){%> selected <%}%>>Membre</option>
+        </select>
+        <button type="submit"><i class="fas fa-user-edit"></i></button>
+      </form>
+    </div>
+      <% }) %> 
+    </body>
 
->>>>>>> Lap
-</body>
 </html>

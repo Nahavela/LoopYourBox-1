@@ -6,31 +6,64 @@
 @import "../base/global";
 @import "../layouts/navbar";
 
-
 body {
    .container {
+      #filter {
+         position: fixed;
+         top: 60px;
+         right: 20px;
+         font-size: 0.7rem;
+         padding: 0.1rem 0.1rem;
+         margin-bottom: 3rem;
+         a {
+            color: $secondary-color;
+            @extend %button-global;
+         }
+      }
 
       .list {
          &-item {
+            color: darken($base-grey, 70%);
+            font-weight: 500;
+            font-size: 1.1rem;
             border-radius: 5px;
             margin: 0.8rem auto;
             background: lighten($base-grey, 10%);
             width: 90%;
             padding: 1.2rem 0;
             @include flex(row, space-between, center);
+
             &:nth-child(odd) {
                background: lighten($base-grey, 15%);
             }
 
-            a {
-               color: darken($base-grey, 70%);
-               font-weight: 500;
-               margin-left: 1rem;
-               font-size: 1.1rem;
-            }
-
             i {
                margin-right: 1rem;
+            }
+
+            span {
+               margin-left: 1rem;
+            }
+         }
+      }
+
+      // LIST OF USER
+
+      .user-item {
+         width: 100%;
+         padding: 1rem;
+         background: lighten($base-grey, 5%);
+         &:nth-child(odd) {
+            background: lighten($base-grey, 13%);
+         }
+         @include flex(row, space-between, center);
+         form {
+            width: 50%;
+            @include flex(row, space-around, center);
+
+            select {
+               width: auto;
+               height: auto;
             }
          }
       }
