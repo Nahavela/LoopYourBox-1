@@ -2,56 +2,13 @@
 <html>
 
 <head>
-   <meta charset='utf-8' />
-   <title>Local search app</title>
-   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-   <link href='/css/style.css' rel='stylesheet' />
-   <link href='/css/style.css' rel='stylesheet' />
-   <script src="https://kit.fontawesome.com/ade53cd309.js" crossorigin="anonymous"></script>
-   <link rel="stylesheet" href="/css/materialize.css">
-   <link rel="stylesheet" href="/css/partner.css">
-
-
-</head>
-<body>
-    <!-- NAVBAR -->
-    <%- include('../../../layouts/navbar.ejs') -%>
-<div class="container">
-  <div class="row">
-   <a class="backBtn" href="/dashboard">Retour</a>
-     <h2 class="col s12">List of users</h2>
-  </div>
-  <div class="row collection">
-    <% userInfo.forEach((user) => { %>
-
-        <a href="/user/<%= user._id %>" class="col s4 collection-item"><%= user.firstname %></a>
-        <form action="/api/userStatus/<%= user._id %>?_method=PUT" method="POST" class="col s8 collection-item">
-          <select class="browser-default col s8" id="status" name="status">
-          <option value="admin" <% if (user.status=="admin"){%> selected <%}%>>Admin</option>
-            <option value="partner" <% if (user.status=="partner"){%> selected <%}%>>Partenaire</option>
-            <option value="member" <% if (user.status=="member"){%> selected <%}%>>Membre</option>
-          </select>
-          <button class="col s1" type="submit"><i class="fas fa-user-edit"></i></button>
-        </form>
-      
-        <% }); %>
-  </div>
-
-
-</div>
-<script src="/js/bin/materialize.js"></script>
-<script src="/js/bin/materialize-init.js"></script>
-
-=======
-=======
->>>>>>> Lap
+  <link href='/css/style.css' rel='stylesheet' />
   <meta charset='utf-8' />
   <title>Local search app</title>
   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
   <link rel="stylesheet" href="/css/materialize.css">
   <link rel="stylesheet" href="/css/dashboard_pages.css">
   <script src="https://kit.fontawesome.com/ade53cd309.js" crossorigin="anonymous"></script>
-
 </head>
 
 
@@ -77,6 +34,8 @@
       </form>
     </div>
       <% }) %> 
-    </body>
+  <script src="/js/bin/materialize.js"></script>
+  <script src="/js/bin/materialize-init.js"></script>
+</body>
 
 </html>
