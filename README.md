@@ -1,87 +1,57 @@
 # Loop Your Box
 
-One Paragraph of project description goes here
+La collaboration entre LYB et BeCode a pour objectif de développer une application flexible capable de digitaliser la consigne pour différents types d’emballage (contenants alimentaires, verres, bouteilles, autre…) afin d’inciter la réutilisation via un système de récompense (accumulation de points en vue d’une réduction, produit/service gratuit) lors de chaque utilisation. Le but est de faciliter l’adoption de solution réutilisables côté consommateur final via une logique de gamification, récompense (psychologique et  matérielle) et reminders (notification push etc.). Côté partenaires (restaurants, épiceries, cantines..) en diminuant les contraintes logistiques liées à la gestion du réutilisable: flux d’argent, perte/casse, manque de traçabilité de l’impact du réutilisable (impact environnemental, économie réalisées).  
 
-## Getting Started
+L’application sera donc constitué de 4 versions avec des finalités et des fonctionnalités différentes: 
+* consommateur final
+* partenaire
+* admin 
+* invité
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-### Prerequisites
 
-What things you need to install the software and how to install them
+### Installation
 
+* Cloner le repository 
+* Aller sur la branche master
+* Installer les modules avec la commande: 
 ```
-Give examples
-```
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
+npm i
 ```
 
-And repeat
+## Deploiement
 
-```
-until finished
-```
+Projet déployé sur Heroku, reste à le deployé sur O2switch avec LYB
 
-End with an example of getting some data out of the system or using it for a little demo
+## Construit avec
 
-## Running the tests
+* [Node.js](https://nodejs.org/en/) - Techno utilisée pour le backend
+* [Express](https://expressjs.com/fr/) - Framework utilisé avec Node
+* [MongoDB](https://www.mongodb.com/fr) - Base de donnée
+* [Mapbox](https://www.mapbox.com/) - API utilisée pour la carte
+* [jsQR](https://github.com/cozmo/jsQR) - Utilisé pour toute le partie QR Code
+* [HTML]
+* [CSS]
+* [Materialize](https://materializecss.com/) - Framework utilisé pour le front
 
-Explain how to run the automated tests for this system
 
-### Break down into end to end tests
+## Auteurs
 
-Explain what these tests test and why
+* **Alexander Spiesberger** - [Github](https://github.com/AlexJS6)
 
-```
-Give an example
-```
+* **Lap Hoang** - [Github](https://github.com/lap-hoang24)
 
-### And coding style tests
+* **Matt Nannetti** - [Github](https://github.com/MattNannetti
 
-Explain what these tests test and why
+* **Nathalie Havelange** - [Github](https://github.com/Nahavela)
 
-```
-Give an example
-```
+* **Phuong Dat Tran** - [Github](https://github.com/phuongdattran)
 
-## Deployment
+* **Sacha Thillaye** - [Github](https://github.com/SachaThillayeduBoullay)
 
-Add additional notes about how to deploy this on a live system
+* **Yauh Ask** 
 
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
-## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
