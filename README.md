@@ -30,8 +30,8 @@ Projet déployé sur Heroku, reste à le deployé sur O2switch avec LYB
 * [MongoDB](https://www.mongodb.com/fr) - Base de donnée
 * [Mapbox](https://www.mapbox.com/) - API utilisée pour la carte
 * [jsQR](https://github.com/cozmo/jsQR) - Utilisé pour toute le partie QR Code
-* [HTML]
-* [CSS]
+* HTML
+* CSS
 * [Materialize](https://materializecss.com/) - Framework utilisé pour le front
 
 
@@ -52,10 +52,10 @@ Projet déployé sur Heroku, reste à le deployé sur O2switch avec LYB
 * **Yauh Ask** 
 
 
-## Informations supplémentaires
+## Information supplémentaire
 
-* [Guide utilisateur](https://github.com/AlexJS6)
+* [Guide utilisateur](https://github.com/Nahavela/npProject/files/5724938/UserGuide.pdf)
 
-* [Guide développeur](https://github.com/AlexJS6)
+* [Guide développeur](https://github.com/Nahavela/npProject/files/5724950/DevUserGuide.pdf)
 
 
