@@ -52,6 +52,10 @@ Projet déployé sur Heroku, reste à le deployé sur O2switch avec LYB
 * **Yauh Ask** 
 
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+## Informations supplémentaires
+
+* [Guide utilisateur](https://github.com/AlexJS6)
+
+* [Guide développeur](https://github.com/AlexJS6)
 
 
