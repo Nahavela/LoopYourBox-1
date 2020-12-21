@@ -21,7 +21,7 @@ npm i
 
 ## Deploiement
 
-Projet déployé sur Heroku, reste à le deployé sur O2switch avec LYB
+Projet déployé sur Heroku, reste à le deployer sur O2switch, hébergeur de LYB
 
 ## Construit avec
 
