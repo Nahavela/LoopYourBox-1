@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Loop Your Box</title>
     <link rel="stylesheet" href="/css/materialize.css">
     <link rel="stylesheet" href="/css/partner_details.css">
     <script src="https://kit.fontawesome.com/ade53cd309.js" crossorigin="anonymous"></script>
@@ -31,7 +31,7 @@
         </div>
         <div class="container">
             <div class="partner_info">
-                <div class="heading"><i class="fas fa-info-circle"></i>info</div>
+                <div class="heading"><i class="fas fa-info-circle"></i>Informations</div>
                 <div class="info">
                     <div class="partner_info-address"><%= partnerInfo.address.street %></div>
                     <div class="partner_info-location">
@@ -55,9 +55,9 @@
 
             </div>
             <div class="partner_openhours">
-                <div class="heading"><i class="fas fa-clock"></i>opening hours</div>
+                <div class="heading"><i class="fas fa-clock"></i>Heures d'ouverture</div>
                 <div class="day"><span>Lundi: </span> <span><%= partnerInfo.schedule.monday %></span></div>
-                <div class="day"><span> Mardi: </span> <span><%= partnerInfo.schedule.tuesday %></span></div>
+                <div class="day"><span>Mardi: </span> <span><%= partnerInfo.schedule.tuesday %></span></div>
                 <div class="day"><span>Mercredi: </span> <span><%= partnerInfo.schedule.wednesday %></span></div>
                 <div class="day"><span>Jeudi:</span> <span><%= partnerInfo.schedule.thursday %></span> </div>
                 <div class="day"><span>Vendredi: </span> <span><%= partnerInfo.schedule.friday %></span></div>
@@ -67,8 +67,8 @@
 
             <% if(statusInfo.userStatus == 'admin' || statusInfo.partnerId == partnerInfo._id) {%>
             <div class="admin-button row">
-                <a class="col s4 offset-s1" href="/updatePartner/<%= partnerInfo._id %>">Edit</a>
-                <a class="col s4 offset-s2 modal-trigger" href="#modal">Delete</a>
+                <a class="col s4 offset-s1" href="/updatePartner/<%= partnerInfo._id %>">Modifier</a>
+                <a class="col s4 offset-s2 modal-trigger" href="#modal">Supprimer</a>
             </div>
             <div id="modal" class="modal">
                 <div class="modal-content">

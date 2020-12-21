@@ -4,7 +4,7 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
+   <title>Loop Your Box</title>
    <link rel="stylesheet" href="/css/materialize.css">
    <link rel="stylesheet" href="/css/history_details.css">
    <script src="https://kit.fontawesome.com/ade53cd309.js" crossorigin="anonymous"></script>
@@ -19,7 +19,7 @@
    <main class="container">
 
       <div class="row">
-         <h2 class="sub_page-heading">History details</h2>
+         <h2 class="sub_page-heading">Détails de l'historique</h2>
       </div>
 
       <div class="row">
@@ -39,17 +39,17 @@
                <span class="left">Action:</span>  <%= historyInfo[0].action %>
             </div>
             <div class="block">
-               <span class="left">Time:</span> <%= historyInfo[0].date %>
+               <span class="left">Date:</span> <%= historyInfo[0].date %>
             </div>
          </div>
 
          <div class="container-details">
             <div class="block heading" ><%= historyInfo[0].containerInfo.name %></div>
             <div class="block">
-              <span class="left">Credits:</span>  <%= historyInfo[0].containerInfo.credit %>
+              <span class="left">Crédits:</span>  <%= historyInfo[0].containerInfo.credit %>
             </div>
             <div class="block">
-               <span class="left">Material:</span> <%= historyInfo[0].containerInfo.material %>
+               <span class="left">Matériau:</span> <%= historyInfo[0].containerInfo.material %>
             </div>
          </div>
 

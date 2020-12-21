@@ -3,7 +3,7 @@
 
 <head>
    <meta charset="utf-8" />
-   <title>Use the geocoder without a map</title>
+   <title>Loop Your Box</title>
    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
    <script src="https://kit.fontawesome.com/ade53cd309.js" crossorigin="anonymous"></script>
    <link rel="stylesheet" href="/css/materialize.css">
@@ -15,14 +15,14 @@
    <a class="backBtn" onclick="window.history.back();"><i class="fas fa-arrow-left"></i></a>
    <div class="container">
       <div class="row">
-         <h2 class="sub_page-heading">Update Container</h2>
+         <h2 class="sub_page-heading">Modifier Contenant</h2>
       </div>
       <div class="row">
          <form action="/api/container/<%= containerInfo._id %>/<%= containerInfo.partnerId %>?_method=PUT" method="POST"
             enctype="multipart/form-data">
             <div class="input-field col s12">
                <input value="<%= containerInfo.name %>" type="text" name="name" class="validate" required>
-               <label for="name">Name</label>
+               <label for="name">Nom</label>
             </div>
             <div class="input-field col s12">
                <select name="material">
@@ -31,10 +31,10 @@
                   <option value="Verre" <% if(containerInfo.material=="Verre") {%> selected <%} %>>Verre</option>
                   <option value="Inox" <% if(containerInfo.material=="Inox") {%> selected <%} %>>Inox</option>
                </select>
-               <label for="material">Material</label>
+               <label for="material">Matériau</label>
             </div>
             <div class="input-field col s12">
-               <label for="credit">Credit</label>
+               <label for="credit">Crédit</label>
                <input value="<%= containerInfo.credit %>" type="number" name="credit" class="validate">
             </div>
             <div class="file-field input-field col s12">
@@ -46,7 +46,7 @@
                   <input class="file-path validate" type="text" value="<%= containerInfo.image.filename %>">
                </div>
             </div>
-            <button class="col s12 waves-effect waves-light btn green darken-1">Edit</button>
+            <button class="col s12 waves-effect waves-light btn green darken-1">Modifier</button>
          </form>
       </div>
    </div>

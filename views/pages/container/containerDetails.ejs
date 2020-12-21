@@ -4,7 +4,7 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
+   <title>Loop Your Box</title>
    <link rel="stylesheet" href="/css/materialize.css">
    <link rel="stylesheet" href="/css/container_details.css">
    <script src="https://kit.fontawesome.com/ade53cd309.js" crossorigin="anonymous"></script>
@@ -32,16 +32,16 @@
 
       </div>
       <div class="container-info">
-         <div class="container-name">Name: <%= containerInfo.name %></div>
-         <div class="container-credit">Credit: <%= containerInfo.credit %></div>
-         <div class="container-material">Material: <%= containerInfo.material %></div>
+         <div class="container-name">Nom: <%= containerInfo.name %></div>
+         <div class="container-credit">Crédit: <%= containerInfo.credit %></div>
+         <div class="container-material">Matériau: <%= containerInfo.material %></div>
       </div>
 
       <% if (status=="partner" || status=="admin"){%>
       <div class="row">
-         <a class="btn col s4 green darken-1 offset-s1" href="/updateContainer/<%= containerInfo._id %>">Edit</a>
+         <a class="btn col s4 green darken-1 offset-s1" href="/updateContainer/<%= containerInfo._id %>">Modifier</a>
          <a class="btn col s4 green darken-1 offset-s2"
-            href="/api/container/delete/<%= containerInfo._id %>/<%= containerInfo.partnerId %>/<%= userInfo._id %>">Delete</a>
+            href="/api/container/delete/<%= containerInfo._id %>/<%= containerInfo.partnerId %>/<%= userInfo._id %>">Supprimer</a>
       </div>
       <% } %>
    </main>

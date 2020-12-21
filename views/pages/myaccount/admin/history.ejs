@@ -3,7 +3,7 @@
 
 <head>
    <meta charset='utf-8' />
-   <title>Local search app</title>
+   <title>Loop Your Box</title>
    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
    <link rel="stylesheet" href="/css/materialize.css">
    <link rel="stylesheet" href="/css/dashboard_pages.css">
@@ -20,7 +20,7 @@
 <%- include('../../../layouts/navbar.ejs') -%>
 <div class="container">
    <div class="row">
-      <h2 class="sub_page-heading">History</h2>
+      <h2 class="sub_page-heading">Historique</h2>
    </div>
    <div class="list">
       <% historyInfo.forEach((history) => { %>
@@ -38,10 +38,9 @@
 
 <div class="modal" id="filter-form">
    <div class="modal-content">
-      <h3>Filter your partner</h3>
+      <h3>Filtrer les partenaires</h3>
       <form action="/dashboard/history" method="GET" id="formFilter">
          <div class="row">
-
             <label class="col s12" for="day">Jour</label>
             <div class="input-field col s12">
                <select class="browser-default" name="day" id="day">
@@ -111,7 +110,7 @@
             </div>
 
          
-         <a class="col s12 waves-effect waves-light btn" onclick="document.getElementById('formFilter').submit()">Trier</a>
+         <a class="col s12 waves-effect waves-light btn" onclick="document.getElementById('formFilter').submit()">Filtrer</a>
          </div>
       </form>
       

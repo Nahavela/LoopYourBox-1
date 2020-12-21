@@ -3,7 +3,7 @@
 
 <head>
    <meta charset="utf-8" />
-   <title>Use the geocoder without a map</title>
+   <title>Loop Your Box</title>
    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
    <link rel="stylesheet"
       href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css"
@@ -33,7 +33,7 @@
                <input value="<%= partnerInfo.name %>" type="text" name="name" class="validate" required>
             </div>
             <div class="input-field">
-               <label for="phoneNumber">Phone Number</label>
+               <label for="phoneNumber">Numéro de téléphone</label>
                <input value="<%= partnerInfo.phoneNumber %>" type="text" name="phoneNumber" class="validate">
             </div>
             <div class="input-field">
@@ -41,11 +41,11 @@
                <input value="<%= partnerInfo.website %>" type="text" name="website" class="validate">
             </div>
             <div class="input-field">
-               <label for="chain">Chain</label>
+               <label for="chain">Chaine</label>
                <input value="<%= partnerInfo.chain %>" type="text" name="chain" class="validate">
             </div>
             <div class="input-field">
-               <p><label for="sport">Food Type</label></p>
+               <p><label for="sport">Type de nourriture</label></p>
                <select name="foodType">
                   <option <% if (partnerInfo.foodType == "Autres"){ %> selected <% } %>>Autres</option>
                   <option <% if (partnerInfo.foodType == "vietnamien"){ %> selected <% } %>value="vietnamien">
@@ -72,44 +72,44 @@
             </div>
             <div class="input-field">
 
-               <label for="monday">Monday</label>
+               <label for="monday">Lundi</label>
                <input value="<%= partnerInfo.schedule.monday %>" type="text" name="schedule.monday" class="validate">
             </div>
             <div class="input-field">
-               <label for="tuesday">Tuesday</label>
+               <label for="tuesday">Mardi</label>
                <input value="<%= partnerInfo.schedule.tuesday %>" type="text" name="schedule.tuesday" class="validate">
 
             </div>
 
             <div class="input-field">
 
-               <label for="wednesday">Wednesday</label>
+               <label for="wednesday">Mercredi</label>
                <input value="<%= partnerInfo.schedule.wednesday %>" type="text" name="schedule.wednesday"
                   class="validate">
             </div>
             <div class="input-field">
-               <label for="thursday">Thursday</label>
+               <label for="thursday">Jeudi</label>
                <input value="<%= partnerInfo.schedule.thursday %>" type="text" name="schedule.thursday"
                   class="validate">
             </div>
             <div class="input-field">
-               <label for="friday">Friday</label>
+               <label for="friday">Vendredi</label>
                <input value="<%= partnerInfo.schedule.friday %>" type="text" name="schedule.friday" class="validate">
             </div>
             <div class="input-field">
-               <label for="saturday">Saturday</label>
+               <label for="saturday">Samedi</label>
                <input value="<%= partnerInfo.schedule.saturday %>" type="text" name="schedule.saturday"
                   class="validate">
             </div>
             <div class="input-field">
-               <label for="sunday">Sunday</label>
+               <label for="sunday">Dimanche</label>
                <input value="<%= partnerInfo.schedule.sunday %>" type="text" name="schedule.sunday" class="validate">
             </div>
             <div class="input-field">
                <input type="hidden" name="oldImage" value="<%= partnerInfo.image.filename %>">
                <input type="hidden" id="place_name" value="<%= partnerInfo.address.place_name %>">
             </div>
-            <label for="address">Address</label>
+            <label for="address">Adresse</label>
             <div class="input-field">
                <input type="hidden" name="address" id="address" value="<%= JSON.stringify(partnerInfo.address)%>"
                   required>
@@ -117,7 +117,7 @@
             <div id="geocoder"></div>
       </div>
       <div class="row">
-         <button class="col s12 waves-effect waves-light btn green darken-1">Edit</button>
+         <button class="col s12 waves-effect waves-light btn green darken-1">Modifier</button>
       </div>
       </form>
    </div>

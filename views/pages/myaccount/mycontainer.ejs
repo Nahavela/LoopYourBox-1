@@ -3,7 +3,7 @@
 
 <head>
    <meta charset='utf-8' />
-   <title>Local search app</title>
+   <title>Loop Your Box</title>
    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
    <link rel="stylesheet" href="/css/materialize.css">
    <link rel="stylesheet" href="/css/my_container.css">
@@ -18,7 +18,7 @@
    <a class="backBtn" onclick="window.history.back();"><i class="fas fa-arrow-left"></i></a>
    <main class="container">
       <div class="row">
-         <h2 class="sub_page-heading">List of containers</h2>
+         <h2 class="sub_page-heading">Liste des contenants</h2>
       </div>
       <div class="user-container">
          <% containerInfo.forEach((container) => { %>
@@ -30,7 +30,7 @@
       </div>
       <% if (status === "partner" || status === "admin"){%>
       <div class="row">
-         <a class="col s8 offset-s2 btn green darken-1" href="/createContainer">Add container</a>
+         <a class="col s8 offset-s2 btn green darken-1" href="/createContainer">Ajouter</a>
       </div>
       <%}%>
 

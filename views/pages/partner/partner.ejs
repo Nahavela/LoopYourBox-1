@@ -3,7 +3,7 @@
 
 <head>
    <meta charset="utf-8" />
-   <title>Local search app</title>
+   <title>Loop Your Box</title>
    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
    <link href='/css/style.css' rel='stylesheet' />
    <script src="https://kit.fontawesome.com/ade53cd309.js" crossorigin="anonymous"></script>
@@ -21,7 +21,7 @@
    <main class="container">
       <div class="page-title">Bienvenue!</div>
       <div class="row" id="partnerList">
-         <div id="partner-title">all available partners</div>
+         <div id="partner-title">Liste des partenaires</div>
          <% partnerInfo.forEach((partner) => { %>
          <a href="/partner/<%= partner._id %>">
             <div class="partner">
@@ -46,7 +46,7 @@
 
       <div class="modal" id="filter-form">
          <div class="modal-content">
-            <h3>Filter your partner</h3>
+            <h3>Filtrer les partenaires</h3>
             <form action="/partner" method="GET" id="formFilter">
                <div class="row">
 

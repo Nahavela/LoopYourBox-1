@@ -541,3 +541,17 @@ body .container .user-item form select {
   height: auto;
 }
 /*# sourceMappingURL=dashboard_pages.css.map */
+
+#filter {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  font-size: 0.7rem;
+  padding: 0.1rem 0.1rem;
+  margin-bottom: 3rem;
+}
+
+#filter a{
+  color: white;
+  padding: 10px;
+}
