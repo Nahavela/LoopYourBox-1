@@ -41,7 +41,7 @@ Projet déployé sur Heroku, reste à le deployé sur O2switch avec LYB
 
 * **Lap Hoang** - [Github](https://github.com/lap-hoang24)
 
-* **Matt Nannetti** - [Github](https://github.com/MattNannetti
+* **Matt Nannetti** - [Github](https://github.com/MattNannetti)
 
 * **Nathalie Havelange** - [Github](https://github.com/Nahavela)
 
