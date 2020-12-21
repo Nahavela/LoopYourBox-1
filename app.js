@@ -11,7 +11,7 @@ require('dotenv').config();
 
 mongoose
   .connect(
-    `mongodb+srv://LoopYourBox:${process.env.MONGODB_PW}@cluster0.cvmy6.gcp.mongodb.net/loopyourbox?retryWrites=true&w=majority`,
+    `mongodb+srv://becode_lyp:${process.env.MONGODB_PW}@cluster0.d7yoz.mongodb.net/loopyourbox?retryWrites=true&w=majority`,
     { useCreateIndex: true, useNewUrlParser: true, useUnifiedTopology: true }
   )
   .then(() => console.log("Connected to database"))
