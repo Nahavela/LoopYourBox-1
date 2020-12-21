@@ -36,7 +36,7 @@
                 <a class="link padding" class="" href="/updateUser/<%= userInfo._id %>"> <span>Modifier mes informations
                     </span>
                     <i class="fas fa-chevron-right"></i></a>
-                <a class="link padding" class="modal-trigger" href="#modal"><span>Supprimer mon compte </span><i
+                <a class="link padding modal-trigger" href="#modal"><span>Supprimer mon compte </span><i
                         class="fas fa-chevron-right"></i></a>
                 <% if(userInfo.status =="partner" || userInfo.status =="member") {%>
                 <a class="link padding" href="/mycontainer/<%= userInfo._id %>"><span>Mes contenants </span><i
@@ -49,14 +49,17 @@
                 
                 <!-- Modal Structure -->
                 <div id="modal" class="modal">
+
+
                     <div class="modal-content">
                         <h4>Supprimer son compte ? </h4>
                     </div>
                     <div class="modal-footer">
-                        <a href="/api/user/delete/<%= userInfo._id %>"
-                class="modal-close waves-effect waves-green btn-flat danger">Confirmer</a>
+                        <a href="/api/user/delete/<%= userInfo._id %>" class="modal-close waves-effect waves-green
+                btn-flat danger">Confirmer</a>
                 <a href="#" class="modal-close waves-effect waves-green btn-flat">Annuler</a>
             </div>
+        </div>
         </div>
 
 
@@ -105,7 +108,8 @@
         <% if(userInfo.status =="admin") {%>
         <div class="admin_account">
             <div class="admin_account-heading padding">Dashboard</div>
-            <a class="link padding" href="/dashboard"> <span>Admin Dashboard</span> <i class="fas fa-chevron-right"></i> </a>
+            <a class="link padding" href="/dashboard"> <span>Admin Dashboard</span> <i class="fas fa-chevron-right"></i>
+            </a>
         </div>
         <%}%>
     

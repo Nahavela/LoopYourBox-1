@@ -33,7 +33,7 @@ geocoder.on('result', function(data) {
 })
 
 let url = window.location.href;
-if (url.startsWith('http://localhost:3000/updatePartner')) {
+if (url.startsWith(`http://localhost:3000/updatePartner`)) {
     const placeName = document.getElementById('place_name').value;
     const geocoderInput = document.getElementsByClassName('mapboxgl-ctrl-geocoder--input')[0];
     geocoderInput.value =  placeName;

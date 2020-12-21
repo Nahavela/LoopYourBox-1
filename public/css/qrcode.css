@@ -27,17 +27,22 @@ body #informations #validation {
   text-align: center;
   padding-bottom: 1rem;
   border-bottom: 1px solid rgba(203, 203, 203, 0.976);
+  color: #43a047;
 }
 
 .backBtn {
   position: fixed;
-  top: 0.7rem;
-  left: 1rem;
+  top: 0.4rem;
+  left: 0.2rem;
   border-radius: 100%;
-  background: rgba(236, 236, 236, 0.976);
+  font-size: 1.3rem;
   color: #43a047;
   padding: 0.9rem 1rem;
   z-index: 1000;
+}
+
+#btn-padding {
+  margin-top: 2rem;
 }
 
 .m-1 {
@@ -458,7 +463,7 @@ body #informations {
   text-align: center;
 }
 
-body #informations .partner-info, body #informations .container-info {
+body #informations .partner-info, body #informations .container-info, body #informations .action-info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -474,10 +479,14 @@ body #informations .partner-info, body #informations .container-info {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 1rem 0;
+  padding: 1rem 0 1rem 1.5rem;
   margin: 1rem auto;
   background: rgba(234, 234, 234, 0.976);
   border-radius: 10px;
+}
+
+body #informations .action-info div {
+  padding-left: 1.9rem;
 }
 
 body #informations p {
@@ -485,7 +494,7 @@ body #informations p {
   color: rgba(76, 76, 76, 0.976);
 }
 
-body #informations #partner, body #informations #container {
+body #informations #partner, body #informations #container, body #informations #action {
   margin-left: 1rem;
   color: #43a047;
 }

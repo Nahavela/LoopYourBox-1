@@ -28,21 +28,30 @@ body {
 
    #informations {
       text-align: center;
-      .partner-info, .container-info {
+
+      // #action {
+      //    font-size: 1.5rem;
+      // }
+      .partner-info, .container-info, .action-info {
          @include flex(row, flex-start, center);
-         padding: 1rem 0;
+         padding: 1rem 0 1rem 1.5rem;
          margin: 1rem auto;
          background: lighten($base-grey, 12%);
          border-radius: 10px;
+      }
+
+      .action-info div {
+         padding-left: 1.9rem;
       }
       p {
          font-weight: 500;
          color: darken($base-grey, 50%);
       }
-      #partner, #container {
+      #partner, #container, #action {
          margin-left: 1rem;
          color: $primary-color;
       }
+
 
       #validation {
          @extend %button-global;

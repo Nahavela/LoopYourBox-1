@@ -55,12 +55,12 @@
         }
     }
 
-    .error {
+    .error-container {
         padding: 12rem 0 0 0;
         color: black;
         text-align: center;
         font-size: 1.3rem;
-        &-message {
+        .error {
             color: red;
             font-size: 2rem;
             padding: 2rem 0;

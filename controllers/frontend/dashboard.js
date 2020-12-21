@@ -138,7 +138,25 @@ exports.historyPage = async (req, res) => {
         let selectInfo = await fetch(urlAll, myInit);
         selectInfo = await selectInfo.json();
 
-        res.render('pages/myaccount/admin/history', {historyInfo, selectInfo});
+        let day = [... new Set(selectInfo.map( history => {
+            if(history.day<10) {
+                return "0"+history.day
+            } else {
+                return history.day
+            }
+        }))].sort()
+
+        let month = [... new Set(selectInfo.map( history => {
+            if(history.month<10) {
+                return "0"+history.month
+            } else {
+                return history.month
+            }
+        }))].sort()
+
+        selectDateInfo = {day, month}
+
+        res.render('pages/myaccount/admin/history', {historyInfo, selectInfo, selectDateInfo});
     } catch {
         res.status(401).render('pages/error',{ error: `Requête invalide`});
     }

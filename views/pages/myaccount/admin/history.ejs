@@ -16,115 +16,117 @@
    <%- include('../../../layouts/navbar.ejs') -%>
    <a class="backBtn" onclick="window.history.back();"> <i class="fas fa-arrow-left"></i></a>
 
-   <div class="container">
-      <div class="row">
-         <h2 class="sub_page-heading">History</h2>
-      </div>
-      <div class="list">
-         <% historyInfo.forEach((history) => { %>
-         <a class="list-item" href="/history/<%= history.reference %>"> <span><%= history.reference %></span> <i
-            class="fas fa-chevron-right"></i></a>
-         <% }); %>
-      </div>
-
-      <div id='filter' data-target="filter-form" class="waves-effect waves-light btn modal-trigger">
-         <a><i class="fas fa-filter"></i></a>
-      </div>
-
-      <div class="modal" id="filter-form">
-         <div class="modal-content">
-            <h3>Filter your partner</h3>
-            <form action="/dashboard/history" method="GET" id="formFilter">
-               <div class="row">
-
-                  <label class="col s12" for="day">Jour</label>
-                  <div class="input-field col s12">
-                     <select class="browser-default" name="day" id="day">
-                        <option value="all">Tous</option>
-                        <% 
-                  [... new Set(selectInfo.map( history => history.date.split('-')[2].slice(0,2)))]
-                 .forEach(option => { %>
-                        <option value="<%= option %>">
-                           <%= option %>
-                        </option>
-                        <%})%>
-                     </select>
-                  </div>
-
-                  <label class="col s12" for="month">Mois</label>
-                  <div class="input-field col s12">
-                     <select class="browser-default" name="month" id="month">
-                        <option value="all">Tous</option>
-                        <% 
-                  [... new Set(selectInfo.map( history => history.date.split('-')[1]))]
-                 .forEach(option => { %>
-                        <option value="<%= option %>">
-                           <%= option %>
-                        </option>
-                        <%})%>
-                     </select>
-                  </div>
-
-                  <label class="col s12" for="year">Année</label>
-                  <div class="input-field col s12">
-                     <select class="browser-default" name="year" id="year">
-                        <option value="all">Tous</option>
-                        <% 
-                  [... new Set(selectInfo.map( history => history.date.split('-')[0]))]
-                 .forEach(option => { %>
-                        <option value="<%= option %>">
-                           <%= option %>
-                        </option>
-                        <%})%>
-                     </select>
-                  </div>
-
-                  <label class="col s12" for="partner">Partenaire</label>
-                  <div class="input-field col s12">
-                     <select class="browser-default" name="partner" id="partner">
-                        <option value="all">Tous</option>
-                        <% 
-                   [... new Set(selectInfo.map( history => history.partnerInfo.name))]
-                  .forEach(option => { %>
-                        <option value="<%= option %>">
-                           <%= option.charAt(0).toUpperCase() + option.slice(1) %>
-                        </option>
-                        <%})%>
-                     </select>
-                  </div>
-
-                  <label class="col s12" for="action">Action</label>
-                  <div class="input-field col s12">
-                     <select class="browser-default" name="action" id="action">
-                        <option value="all">Tous</option>
-                        <% 
-                   [... new Set(selectInfo.map( history => history.action))]
-                  .forEach(option => { %>
-                        <option value="<%= option %>">
-                           <%= option.charAt(0).toUpperCase() + option.slice(1) %>
-                        </option>
-                        <%})%>
-                     </select>
-                  </div>
-
-
-                  <a class="col s12 waves-effect waves-light btn"
-                     onclick="document.getElementById('formFilter').submit()">Trier</a>
-               </div>
-            </form>
-
-         </div>
-
-      </div>
-
+<!-- NARBAR -->
+<%- include('../../../layouts/navbar.ejs') -%>
+<div class="container">
+   <div class="row">
+      <h2 class="sub_page-heading">History</h2>
    </div>
+   <div class="list">
+      <% historyInfo.forEach((history) => { %>
+         <a href="/history/<%= history.reference %>">
+      <div class="list-item">
+         <%= history.reference %><i class="fas fa-chevron-right"></i>
+      </div></a>
+      <% }); %>
+   </div>
+</div>
+
+<div id='filter' data-target="filter-form" class="waves-effect waves-light btn modal-trigger">
+   <a><i class="fas fa-filter"></i></a>
+</div>
+
+<div class="modal" id="filter-form">
+   <div class="modal-content">
+      <h3>Filter your partner</h3>
+      <form action="/dashboard/history" method="GET" id="formFilter">
+         <div class="row">
+
+            <label class="col s12" for="day">Jour</label>
+            <div class="input-field col s12">
+               <select class="browser-default" name="day" id="day">
+                  <option value="all">Tous</option>                 
+                  <% 
+                  selectDateInfo.day.forEach(option => { %>
+                  <option value="<%= option %>">
+                     <%= option %>
+                  </option>
+                  <%})%>
+               </select>
+            </div>
+
+            <label class="col s12" for="month">Mois</label>
+            <div class="input-field col s12"> 
+               <select class="browser-default" name="month" id="month">
+                  <option value="all">Tous</option>
+                  <% 
+                  selectDateInfo.month.forEach(option => { %>
+                  <option value="<%= option %>">
+                     <%= option %>
+                  </option>
+                  <%})%>
+               </select>
+            </div>
+            
+            <label class="col s12" for="year">Année</label>
+            <div class="input-field col s12">
+               <select class="browser-default" name="year" id="year">
+                  <option value="all">Tous</option>
+                  <% 
+                  [... new Set(selectInfo.map( history => history.year))].sort()
+                  .forEach(option => { %>
+                  <option value="<%= option %>">
+                     <%= option %>
+                  </option>
+                  <%})%>
+               </select>
+            </div>
+
+            <label class="col s12" for="partner">Partenaire</label>
+            <div class="input-field col s12">
+               <select class="browser-default" name="partner" id="partner">
+                  <option value="all">Tous</option>
+                  <% 
+                  [... new Set(selectInfo.map( history => history.partnerInfo.name))].sort()
+                  .forEach(option => { %>
+                  <option value="<%= option %>">
+                     <%= option.charAt(0).toUpperCase() + option.slice(1) %>
+                  </option>
+                  <%})%>
+               </select>
+            </div>
+
+            <label class="col s12" for="action">Action</label>
+            <div class="input-field col s12">
+               <select class="browser-default" name="action" id="action">
+                  <option value="all">Tous</option>
+                  <% 
+                  [... new Set(selectInfo.map( history => history.action))].sort()
+                  .forEach(option => { %>
+                  <option value="<%= option %>">
+                     <%= option.charAt(0).toUpperCase() + option.slice(1) %>
+                  </option>
+                  <%})%>
+               </select>
+            </div>
+
+         
+         <a class="col s12 waves-effect waves-light btn" onclick="document.getElementById('formFilter').submit()">Trier</a>
+         </div>
+      </form>
+      
+   </div>
+   
+</div>
+
+</div>
 
 </body>
-<!-- SCRIPTS -->
-<script src="/js/bin/materialize.js"></script>
-<script src="/js/bin/materialize-init.js"></script>
-<!-- <script>
-      let partnerInfo = <% - JSON.stringify(historyInfo) %>
+   <!-- SCRIPTS -->
+   <script src="/js/bin/materialize.js"></script>
+   <script src="/js/bin/materialize-init.js"></script>
+   <!-- <script>
+      let partnerInfo = <%- JSON.stringify(historyInfo) %>
    </script>-->
 <script src="/js/selectFilterHistory.js"></script>
 

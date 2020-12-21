@@ -1,1 +1,1 @@
-let container = <% - JSON.stringify(containerInfo) %>;
+let container = <%- JSON.stringify(containerInfo) %>;
