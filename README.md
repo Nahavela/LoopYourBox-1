@@ -27,7 +27,7 @@ Projet déployé sur Heroku, reste à le deployer sur O2switch, hébergeur de LY
 
 * [Node.js](https://nodejs.org/en/) - Techno utilisée pour le backend
 * [Express](https://expressjs.com/fr/) - Framework utilisé avec Node
-* [MongoDB](https://www.mongodb.com/fr) - Base de donnée
+* [MongoDB](https://www.mongodb.com/fr) - Base de données
 * [Mapbox](https://www.mapbox.com/) - API utilisée pour la carte
 * [jsQR](https://github.com/cozmo/jsQR) - Utilisé pour toute le partie QR Code
 * HTML
