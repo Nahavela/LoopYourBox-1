@@ -56,6 +56,6 @@ Projet déployé sur Heroku, reste à le deployer sur O2switch, hébergeur de LY
 
 * [Guide utilisateur](https://github.com/Nahavela/npProject/files/5724938/UserGuide.pdf)
 
-* [Guide développeur](https://github.com/Nahavela/npProject/files/5725041/DevUserGuide.pdf)
+
 
 
