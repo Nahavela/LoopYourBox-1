@@ -8,7 +8,7 @@ L’application sera donc constitué de 4 versions avec des finalités et des fo
 * admin 
 * invité
 
-Lien vers l'application : https://loopyourbox.herokuapp.com/
+Lien vers l'application : https://loopyourboxapp.recirclebelgium.be/
 
 ### Installation
 
